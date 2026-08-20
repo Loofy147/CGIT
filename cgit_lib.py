@@ -18,7 +18,7 @@ from sklearn.metrics import r2_score, accuracy_score
 import warnings
 warnings.filterwarnings("ignore")
 
-OPS = ["DISTINGUISH", "RELATE", "COMPARE", "COMPRESS", "PREDICT", "ABSTRACT", "SPECIALIZE", "SIMULATE"]
+OPS = ["DISTINGUISH", "RELATE", "COMPARE", "COMPRESS", "PREDICT", "ABSTRACT", "SPECIALIZE", "SIMULATE", "INTERACT"]
 OP_IDX = {o: i for i, o in enumerate(OPS)}
 MAX_DIM = 60          # safety cap so concatenating operators can't blow up cost
 SIT_DIM = 7            # situation signature length
@@ -212,7 +212,20 @@ def op_simulate(R):
         Rt = 0.7*Rt + 0.3*(A @ Rt)
     return np.hstack([R, Rt])
 
-OP_FUNCS = [op_distinguish, op_relate, op_compare, op_compress, op_predict, op_abstract, op_specialize, op_simulate]
+def op_interact(R):
+    n, d = R.shape
+    if d < 2:
+        return R
+    cols = []
+    for i in range(d):
+        for j in range(i + 1, d):
+            cols.append(R[:, i] * R[:, j])
+    if len(cols) == 0:
+        return R
+    inter = np.column_stack(cols)
+    return np.hstack([R, inter])
+
+OP_FUNCS = [op_distinguish, op_relate, op_compare, op_compress, op_predict, op_abstract, op_specialize, op_simulate, op_interact]
 
 def run_program(X, op_seq):
     R = X.copy()

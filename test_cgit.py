@@ -22,6 +22,14 @@ class TestCGITSystem(unittest.TestCase):
         sig_clf = cgit_lib.situation_signature(self.X, self.y_clf, "clf")
         self.assertEqual(len(sig_clf), cgit_lib.SIT_DIM)
 
+    def test_interact_operator(self):
+        R = np.array([[2.0, 3.0, 5.0],
+                      [4.0, -1.0, 0.0]])
+        res = cgit_lib.op_interact(R)
+        expected = np.array([[2.0, 3.0, 5.0, 6.0, 10.0, 15.0],
+                             [4.0, -1.0, 0.0, -4.0, 0.0, 0.0]])
+        np.testing.assert_array_almost_equal(res, expected)
+
     def test_primitive_operators(self):
         # Test each of the 8 primitive operators to ensure dimension constraints
         for op_idx, op_func in enumerate(cgit_lib.OP_FUNCS):

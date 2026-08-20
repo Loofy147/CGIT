@@ -1,0 +1,121 @@
+{
+  "control": {
+    "physics": {
+      "seq": [
+        7,
+        3
+      ],
+      "seq_names": [
+        "SIMULATE",
+        "COMPRESS"
+      ],
+      "holdout_perf": 0.913771779927118,
+      "holdout_cost": 0.068,
+      "holdout_fitness": 0.845771779927118
+    },
+    "software": {
+      "seq": [],
+      "seq_names": [],
+      "holdout_perf": 0.14111060351914362,
+      "holdout_cost": 0.0048000000000000004,
+      "holdout_fitness": 0.13631060351914362
+    },
+    "biology": {
+      "seq": [],
+      "seq_names": [],
+      "holdout_perf": 0.4981584132257252,
+      "holdout_cost": 0.0056,
+      "holdout_fitness": 0.4925584132257252
+    },
+    "economics": {
+      "seq": [],
+      "seq_names": [],
+      "holdout_perf": 0.9978438549914384,
+      "holdout_cost": 0.0032,
+      "holdout_fitness": 0.9946438549914384
+    },
+    "robotics": {
+      "seq": [
+        4,
+        6
+      ],
+      "seq_names": [
+        "PREDICT",
+        "SPECIALIZE"
+      ],
+      "holdout_perf": 0.13415729123216927,
+      "holdout_cost": 0.076,
+      "holdout_fitness": 0.05815729123216927
+    },
+    "social": {
+      "seq": [],
+      "seq_names": [],
+      "holdout_perf": 0.3453929207107145,
+      "holdout_cost": 0.0032,
+      "holdout_fitness": 0.3421929207107145
+    }
+  },
+  "treatment": {
+    "physics": {
+      "seq": [
+        8
+      ],
+      "seq_names": [
+        "INTERACT"
+      ],
+      "holdout_perf": 0.9839789779318999,
+      "holdout_cost": 0.066,
+      "holdout_fitness": 0.9179789779318999
+    },
+    "software": {
+      "seq": [],
+      "seq_names": [],
+      "holdout_perf": 0.14111060351914362,
+      "holdout_cost": 0.0048000000000000004,
+      "holdout_fitness": 0.13631060351914362
+    },
+    "biology": {
+      "seq": [],
+      "seq_names": [],
+      "holdout_perf": 0.4981584132257252,
+      "holdout_cost": 0.0056,
+      "holdout_fitness": 0.4925584132257252
+    },
+    "economics": {
+      "seq": [],
+      "seq_names": [],
+      "holdout_perf": 0.9978438549914384,
+      "holdout_cost": 0.0032,
+      "holdout_fitness": 0.9946438549914384
+    },
+    "robotics": {
+      "seq": [
+        7,
+        8
+      ],
+      "seq_names": [
+        "SIMULATE",
+        "INTERACT"
+      ],
+      "holdout_perf": 0.6071197814166467,
+      "holdout_cost": 0.10400000000000001,
+      "holdout_fitness": 0.5031197814166467
+    },
+    "social": {
+      "seq": [],
+      "seq_names": [],
+      "holdout_perf": 0.3453929207107145,
+      "holdout_cost": 0.0032,
+      "holdout_fitness": 0.3421929207107145
+    }
+  },
+  "raw": {
+    "physics": 0.8336058878458372,
+    "software": 0.14111060351914362,
+    "biology": 0.4981584132257252,
+    "economics": 0.9978438549914384,
+    "robotics": 0.0,
+    "social": 0.3453929207107145
+  },
+  "elapsed_seconds": 93.87986350059509
+}
